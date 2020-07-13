@@ -93,9 +93,13 @@ Remplacer toutes les occurrences dans tout le fichier
 
 ### Fusionner des fichiers
 
-Insérer un fichier à partir de la position du curseur
+Insérer un fichier ou le résultat d’une commande externe à partir de la position du curseur
 
 `:r<nom du fichier>`
+
+ou
+
+`:r! <command>`
 
 On peut utiliser l'autocomplétion pour trouver le fichier!
 
@@ -141,7 +145,7 @@ Pour enregistrer et fermer une fenêtre (control+wq)
 
 `:badd <nouveau fichier>`
 
-Afficher les fichiers dans le buffeur
+Afficher les fichiers dans le buffer
 
 `:ls`
 
@@ -189,3 +193,96 @@ Maintenant on peut lancer l'impression
 Ou si on veut imprimer un autre fichier
 
 `:hardcopy <nom fichier>`
+
+### Ouvrir un explorateur de fichiers
+
+`:e <chemin>`
+
+Ouvrir l'explorateur dans une autre fenêtre
+
+* `:Vex` : découpe verticale
+
+* `:Sex` : découpe horizontale
+
+Éditer le fichier positionné sous le curseur
+
+`gf`
+
+### Ouvrir 2 fichiers cote-à-cote
+
+`vim -O file1 file2`
+
+ou
+
+`vim -o file1 file2`
+
+### Correcteur d'orthographe et grammaire
+
+Téléchargement des fichiers de langue
+
+```
+mkdir -p ~/.vim/spell
+cd ~/.vim/spell
+wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.spl
+wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.sug
+wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.spl
+wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.sug
+```
+
+Activation de la correction
+
+`:setlocal spell spelllang=fr`
+
+* ]s      " va au prochain mot mal orthographié
+* [s      " va au précédent mot mal orthographié
+* zg      " ajoute un mot au dictionnaire
+* zG      ajoute un mot au dictionnaire global
+* zug     " enlève le mot précédemment mit
+* z=      " affiche la liste des mots proposés 
+
+### Installation de Grammalecte pour la correction grammaticale
+
+_Source : https://github.com/dpelle/vim-Grammalecte_
+
+```
+git clone https://github.com/dpelle/vim-Grammalecte.git
+
+cd Grammalecte
+
+cp plugin/* home/daniel/.vim/plugin
+
+cp doc/* home/daniel/.vim/doc
+
+vim -c 'helptags /home/daniel/.vim/doc'
+
+:q!
+
+mkdir /home/daniel/.vimrc
+
+vim /home/daniel/.vimrc
+
+"set nocompatible
+
+filetype plugin on"
+
+mkdir /home/daniel/grammalecte/
+
+wget https://grammalecte.net/grammalecte/zip/Grammalecte-fr-v1.10.0.zip /home/daniel/grammalecte/
+
+unzip /home/daniel/grammalecte/Grammalecte-fr-v1.10.0.zip
+
+rm /home/daniel/grammalecte/Grammalecte-fr-v1.10.0.zip
+
+vim /home/daniel/.vimrc
+
+"set nocompatible
+
+filetype plugin on
+
+let g:grammalecte_cli_py='~/home/daniel/Grammalecte/grammalecte-cli.py'"
+```
+
+* :GrammalecteCheck
+
+Permet de vérifier les erreurs de grammaire
+
