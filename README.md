@@ -43,7 +43,7 @@ différence entre :wq et :x
 :wq la date de modification change toujours même si on a rien modifier
 :x si aucun changement la date de modification n'est pas changé
 
-Enregistrer et ferme toutes les fenetres
+Enregistrer et ferme toutes les fenêtres
 :wqa 
 :xa
 
@@ -55,42 +55,42 @@ O  Sur une nouvelle ligne au-dessus de la ligne courante
 
 Rechercher et remplacer du texte
 Exemple remplacer jean par daniel :
-Remplace la première occurence de la ligne ou se trouve le curseur (:s/jean/daniel/)
-Remplace toutes les occurences de la ligne ou se trouve le curseur (:s/jean/daniel/g)
-Remplace toutes les occurences sur une plage de lignes (:<numéro de ligne, début>,<numéro de ligne, fin>s/jean/daniel/g)
-Exemple : Remplacer toutes les occurences de la ligne 5 à la ligne 16 (:5,16s/jean/daniel/g)
-Remplacer toutes les occurences dans tout le fichier
+Remplace la première occurrence de la ligne ou se trouve le curseur (:s/jean/daniel/)
+Remplace toutes les occurrences de la ligne ou se trouve le curseur (:s/jean/daniel/g)
+Remplace toutes les occurrences sur une plage de lignes (:<numéro de ligne, début>,<numéro de ligne, fin>s/jean/daniel/g)
+Exemple : Remplacer toutes les occurrences de la ligne 5 à la ligne 16 (:5,16s/jean/daniel/g)
+Remplacer toutes les occurrences dans tout le fichier
 :%s/jean/daniel/g
 
 Fusionner des fichiers
-Incerer un fichier à partir de la position du curseur
+Insérer un fichier à partir de la position du curseur
 :r<nom du fichier>
-On peut utiliser l'autocompletion pour trouver le fichier
+On peut utiliser l'autocomplétion pour trouver le fichier
 
-Splite l'écran et ouvre un autre fichier
-:sp <nom du fichier> (Split horizontalement)
-:vsp <nom du fichier> (Split verticalement)
-Pour passer d'une fenetre à l'autre (control+w)
-Pour fermer une fenetre (control +wq)
+Division de l'écran et ouverture d'un fichier
+:sp <nom du fichier> (division horizontalement)
+:vsp <nom du fichier> (division verticalement)
+Pour passer d'une fenêtre à l'autre (control+w)
+Pour enregistrer et fermer une fenêtre (control+wq)
 
-Numéro de ligne ou nous sommes
+Numéro de la ligne ou se trouve le curseur
 control G
 
-Aller tout en haut du fichier
+Aller tout en haut d'un fichier
 gg
 
-Aller en bas du fichier
-shift g
+Aller tout en bas d'un fichier
+shift+g
 
 Aller à la ligne 520
 :520
 
 Rechercher un mot
-/mot
+/<mot>
 pour le résultat suivant : n
 pour le résultat précédent : N
 
-Afficher les numeros de ligne
+Afficher les numéros de ligne
 :set nu
 :set number
 
@@ -115,7 +115,7 @@ lpstat -p -d
 ou
 lpstat -t
 
-configurer l'imprimante comme imprimante par defaut
+configurer l'imprimante comme imprimante par défaut
 lpoptions -d <nom imprimante>
 lpstat -p -d <nom imprimante>
 
