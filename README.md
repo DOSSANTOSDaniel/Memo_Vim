@@ -1,20 +1,20 @@
 # Aide mémoire des commandes VIM
 
-### Supprime toutes les lignes d'un fichier :`:1,$d`
+### Supprime toutes les lignes d'un fichier --> `:1,$d`
 
-### Va à la fin de la ligne :`$`
+### Va à la fin de la ligne --> `$`
 
-### Va au début de la ligne :`0`
+### Va au début de la ligne --> `0`
 
-### Supprimer ou couper à partir du curseur vers la fin de la ligne :`d$`
+### Supprimer ou couper à partir du curseur vers la fin de la ligne --> `d$`
 
-### Supprimer ou couper à partir du curseur vers le début de la ligne :`d0`
+### Supprimer ou couper à partir du curseur vers le début de la ligne --> `d0`
 
-### Efface la ligne :`dd`
+### Efface la ligne --> `dd`
 
-### Retour arrière :`u`
+### Retour arrière --> `u`
 
-### Retour arrière pour toutes les modifications d'une ligne :`U`
+### Retour arrière pour toutes les modifications d'une lignes --> `U`
 
 ### Copier couper coller
 
@@ -99,15 +99,15 @@ Pour passer d'une fenêtre à l'autre (control+w)
 
 Pour enregistrer et fermer une fenêtre (control+wq)
 
-### Numéro de la ligne ou se trouve le curseur :`control+G`
+### Numéro de la ligne ou se trouve le curseur --> `control+G`
 
-### Aller tout en haut d'un fichier :`gg`
+### Aller tout en haut d'un fichier --> `gg`
 
-### Aller tout en bas d'un fichier :`shift+g`
+### Aller tout en bas d'un fichier --> `shift+g`
 
-### Aller à la ligne 520 :`:520`
+### Aller à la ligne 520 --> `:520`
 
-### Rechercher un mot :
+### Rechercher un mot
 
 `/<mot>`
 
@@ -138,7 +138,7 @@ Autre façon de switcher
 * Occurrence suivante : (:bn)
 * Occurrence précédente : (:bp)
 
-### Lancer une commande externe à VIM :`:!`
+### Lancer une commande externe à VIM --> `:!`
 
 Exemple (`:! ps -aux`)
 
@@ -264,7 +264,7 @@ let g:grammalecte_cli_py='~/home/daniel/Grammalecte/grammalecte-cli.py'"
 
 Permet de vérifier les erreurs de grammaire
 
-### Efface un mot après le curseur et se met en mode insertion :`ce`
+### Efface un mot après le curseur et se met en mode insertion --> `ce`
 
 ### Si on ouvre un fichier et qu'on l'édite alors que nous n'avons pas les droits, comment faire ?
 
