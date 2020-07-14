@@ -1,35 +1,27 @@
-# Aide mémoire des commandes sur VIM
+# Aide mémoire des commandes VIM
 
-### Supprime toutes les lignes d'un fichier
+### Supprime toutes les lignes d'un fichier :
+`:1,$d`
 
-`:1,$d` 
-
-### Va à la fin de la ligne 
-
+### Va à la fin de la ligne :
 `$`
 
-### Va au début de la ligne
-
+### Va au début de la ligne :
 `0`
 
-### Supprimer ou couper à partir du curseur vers la fin de la ligne
-
+### Supprimer ou couper à partir du curseur vers la fin de la ligne :
 `d$`
 
-### Supprimer ou couper à partir du curseur vers le début de la ligne
-
+### Supprimer ou couper à partir du curseur vers le début de la ligne :
 `d0`
 
-### Efface la ligne
-
+### Efface la ligne :
 `dd`
 
-### Retour arrière
-
+### Retour arrière :
 `u`
 
-### Retour arrière pour toutes les modifications
-
+### Retour arrière pour toutes les modifications d'une ligne :
 `U`
 
 ### Copier couper coller
@@ -58,7 +50,7 @@ Différence entre :wq et :x
 
 ### Enregistrer et fermer toutes les fenêtres
 ```
-:wqa 
+:wqa
 :xa
 ```
 
@@ -87,9 +79,13 @@ Exemple : Remplacer toutes les occurrences de la ligne 5 à la ligne 16
 
 `:5,16s/jean/daniel/g`
 
-Remplacer toutes les occurrences dans tout le fichier
+Remplace toutes les occurrences dans tout le fichier
 
 `:%s/jean/daniel/g`
+
+Remplace toutes les occurrences dans tout le fichier mais de façon interactive
+
+`:%s/jean/daniel/gc`
 
 ### Fusionner des fichiers
 
@@ -111,23 +107,19 @@ Pour passer d'une fenêtre à l'autre (control+w)
 
 Pour enregistrer et fermer une fenêtre (control+wq)
 
-### Numéro de la ligne ou se trouve le curseur
-
+### Numéro de la ligne ou se trouve le curseur :
 `control+G`
 
-### Aller tout en haut d'un fichier
-
+### Aller tout en haut d'un fichier :
 `gg`
 
-### Aller tout en bas d'un fichier
-
+### Aller tout en bas d'un fichier :
 `shift+g`
 
-### Aller à la ligne 520
-
+### Aller à la ligne 520 :
 `:520`
 
-### Rechercher un mot
+### Rechercher un mot :
 
 `/<mot>`
 
@@ -158,8 +150,7 @@ Autre façon de switcher
 * Occurrence suivante : (:bn)
 * Occurrence précédente : (:bp)
 
-### Lancer une commande externe à VIM
-
+### Lancer une commande externe à VIM :
 `:!`
 
 Exemple (`:! ps -aux`)
@@ -238,7 +229,7 @@ Activation de la correction
 * zg      " ajoute un mot au dictionnaire
 * zG      ajoute un mot au dictionnaire global
 * zug     " enlève le mot précédemment mit
-* z=      " affiche la liste des mots proposés 
+* z=      " affiche la liste des mots proposés
 
 ### Installation de Grammalecte pour la correction grammaticale
 
@@ -286,3 +277,9 @@ let g:grammalecte_cli_py='~/home/daniel/Grammalecte/grammalecte-cli.py'"
 
 Permet de vérifier les erreurs de grammaire
 
+### Efface un mot après le curseur et se met en mode insertion :
+`ce`
+
+### Si on ouvre un fichier et qu'on l'édite alors que nous n'avons pas les droits, comment faire ?
+
+`:w !sudo tee %`
