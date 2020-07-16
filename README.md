@@ -10,6 +10,8 @@
 
 ### Supprimer ou couper à partir du curseur vers le début de la ligne --> `d0`
 
+### Supprimer un mot --> `dw`
+
 ### Efface la ligne --> `dd`
 
 ### Retour arrière --> `u`
@@ -31,6 +33,8 @@ Exemple avec 5 lignes:
 * p : coller
 
 Même principe pour copier
+
+### Faire une copie du fichier ouvert --> `:w /chemin/`
 
 ### Enregistrer et quitter VIM
 
