@@ -273,3 +273,9 @@ Permet de vérifier les erreurs de grammaire
 ### Si on ouvre un fichier et qu'on l'édite alors que nous n'avons pas les droits, comment faire ?
 
 `:w !sudo tee %`
+
+### Sélectionner tout le texte d'un fichier ouvert
+`: % y +`
+* `%` : sélectionne tout le texte
+* `y` : copie le texte
+* `+` : colle le texte dans le presse-papiers
