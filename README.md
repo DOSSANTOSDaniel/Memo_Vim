@@ -274,7 +274,8 @@ Permet de vérifier les erreurs de grammaire
 
 `:w !sudo tee %`
 
-### Sélectionner tout le texte d'un fichier ouvert
+### Sélectionner tout le texte d'un fichier ouvert puis copier le dans le presse-papiers système
+Pour que cela fonctonne il faut avoir le paquet "vim-gtk3" d'installé dans votre système!
 `: % y +`
 * `%` : sélectionne tout le texte
 * `y` : copie le texte
