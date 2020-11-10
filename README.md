@@ -1,30 +1,30 @@
 # Aide mémoire des commandes VIM
 
-### Supprime toutes les lignes d'un fichier --> `:1,$d`
+Supprime toutes les lignes d'un fichier --> `:1,$d`
 
-### Va à la fin de la ligne --> `$`
+Va à la fin de la ligne --> `$`
 
-### Va au début de la ligne --> `0`
+Va au début de la ligne --> `0`
 
-### Supprimer ou couper à partir du curseur vers la fin de la ligne --> `d$`
+Supprimer ou couper à partir du curseur vers la fin de la ligne --> `d$`
 
-### Supprimer ou couper à partir du curseur vers le début de la ligne --> `d0`
+Supprimer ou couper à partir du curseur vers le début de la ligne --> `d0`
 
-### Supprimer un mot --> `dw`
+Supprimer un mot --> `dw`
 
-### Efface la ligne --> `dd`
+Efface la ligne --> `dd`
 
-### Retour arrière --> `u`
+Retour arrière --> `u`
 
-### Retour arrière pour toutes les modifications d'une lignes --> `U`
+Retour arrière pour toutes les modifications d'une lignes --> `U`
 
-### Copier couper coller
+Copier couper coller
 
 * dd : couper la ligne
 * yy : copier la ligne
 * p : coller la ligne
 
-### Couper copier coller plusieurs lignes
+Couper copier coller plusieurs lignes
 
 Exemple avec 5 lignes:
 
@@ -34,9 +34,9 @@ Exemple avec 5 lignes:
 
 Même principe pour copier
 
-### Faire une copie du fichier ouvert --> `:w /chemin/`
+Faire une copie du fichier ouvert --> `:w /chemin/`
 
-### Enregistrer et quitter VIM
+Enregistrer et quitter VIM
 
 Différence entre :wq et :x
 
@@ -44,18 +44,19 @@ Différence entre :wq et :x
 
 :x si aucun changement la date de modification n'est pas changé.
 
-### Enregistrer et fermer toutes les fenêtres
+Enregistrer et fermer toutes les fenêtres
+
 ```
 :wqa
 :xa
 ```
 
-### Insertion de texte
+Insertion de texte
 
 * o  Sur une nouvelle ligne en dessous de la ligne courante
 * O  Sur une nouvelle ligne au-dessus de la ligne courante
 
-### Rechercher et remplacer du texte
+Rechercher et remplacer du texte
 
 Exemple remplacer jean par daniel :
 
@@ -83,7 +84,7 @@ Remplace toutes les occurrences dans tout le fichier mais de façon interactive
 
 `:%s/jean/daniel/gc`
 
-### Fusionner des fichiers
+Fusionner des fichiers
 
 Insérer un fichier ou le résultat d’une commande externe à partir de la position du curseur
 
@@ -95,7 +96,7 @@ ou
 
 On peut utiliser l'autocomplétion pour trouver le fichier!
 
-### Division de l'écran et ouverture d'un fichier
+Division de l'écran et ouverture d'un fichier
 * `:sp <nom du fichier>` (division horizontalement)
 * `:vsp <nom du fichier>` (division verticalement)
 
@@ -103,29 +104,29 @@ Pour passer d'une fenêtre à l'autre (control+w)
 
 Pour enregistrer et fermer une fenêtre (control+wq)
 
-### Numéro de la ligne ou se trouve le curseur --> `control+G`
+Numéro de la ligne ou se trouve le curseur --> `control+G`
 
-### Aller tout en haut d'un fichier --> `gg`
+Aller tout en haut d'un fichier --> `gg`
 
-### Aller tout en bas d'un fichier --> `shift+g`
+Aller tout en bas d'un fichier --> `shift+g`
 
-### Aller à la ligne 520 --> `:520`
+Aller à la ligne 520 --> `:520`
 
-### Rechercher un mot
+Rechercher un mot
 
 `/<mot>`
 
 * pour le résultat suivant : n
 * pour le résultat précédent : N
 
-### Afficher les numéros de ligne
+Afficher les numéros de ligne
 
 ```
 :set nu
 :set number
 ```
 
-### Ouvrir plusieurs fichiers en même temps sans avoir à fermer Vim
+Ouvrir plusieurs fichiers en même temps sans avoir à fermer Vim
 
 `:badd <nouveau fichier>`
 
@@ -142,11 +143,11 @@ Autre façon de switcher
 * Occurrence suivante : (:bn)
 * Occurrence précédente : (:bp)
 
-### Lancer une commande externe à VIM --> `:!`
+Lancer une commande externe à VIM --> `:!`
 
 Exemple (`:! ps -aux`)
 
-### Imprimer des documents directement à partir de VIM
+Imprimer des documents directement à partir de VIM
 
 Configuration de lpr sur le système
 
@@ -176,7 +177,7 @@ Ou si on veut imprimer un autre fichier
 
 `:hardcopy <nom fichier>`
 
-### Ouvrir un explorateur de fichiers
+Ouvrir un explorateur de fichiers
 
 `:e <chemin>`
 
@@ -190,7 +191,7 @@ Ouvrir l'explorateur dans une autre fenêtre
 
 `gf`
 
-### Ouvrir 2 fichiers cote-à-cote
+Ouvrir 2 fichiers cote-à-cote
 
 `vim -O file1 file2`
 
@@ -198,7 +199,7 @@ ou
 
 `vim -o file1 file2`
 
-### Correcteur d'orthographe et grammaire
+Correcteur d'orthographe et grammaire
 
 Téléchargement des fichiers de langue
 
@@ -222,7 +223,7 @@ Activation de la correction
 * zug     " enlève le mot précédemment mit
 * z=      " affiche la liste des mots proposés
 
-### Installation de Grammalecte pour la correction grammaticale
+Installation de Grammalecte pour la correction grammaticale
 
 _Source : https://github.com/dpelle/vim-Grammalecte_
 
@@ -268,13 +269,13 @@ let g:grammalecte_cli_py='~/home/daniel/Grammalecte/grammalecte-cli.py'"
 
 Permet de vérifier les erreurs de grammaire
 
-### Efface un mot après le curseur et se met en mode insertion --> `ce`
+Efface un mot après le curseur et se met en mode insertion --> `ce`
 
-### Si on ouvre un fichier et qu'on l'édite alors que nous n'avons pas les droits, comment faire ?
+Si on ouvre un fichier et qu'on l'édite alors que nous n'avons pas les droits, comment faire ?
 
 `:w !sudo tee %`
 
-### Sélectionner tout le texte d'un fichier ouvert puis copier le dans le presse-papiers système
+Sélectionner tout le texte d'un fichier ouvert puis copier le dans le presse-papiers système
 
 Pour que cela fonctonne il faut avoir le paquet "vim-gtk3" d'installé dans votre système!
 
