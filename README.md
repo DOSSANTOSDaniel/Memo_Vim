@@ -287,3 +287,11 @@ Pour que cela fonctonne il faut avoir le paquet "vim-gtk3" d'installé dans votr
 
 Créer un fichier chiffré
 `vim -x fichier.txt`
+
+Afficher le résultat d'une commande directement avec vim
+
+1. Ecrire la commande en mode edition
+
+2. Passer en mode normal
+`.!$SHELL`
+puis valider
