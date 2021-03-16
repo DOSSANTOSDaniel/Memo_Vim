@@ -284,3 +284,6 @@ Pour que cela fonctonne il faut avoir le paquet "vim-gtk3" d'installé dans votr
 * `%` : sélectionne tout le texte
 * `y` : copie le texte
 * `+` : colle le texte dans le presse-papiers
+
+Créer un fichier chiffré
+`vim -x fichier.txt`
