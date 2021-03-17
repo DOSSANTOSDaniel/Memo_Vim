@@ -1,6 +1,6 @@
 # Aide mémoire des commandes VIM
 
-Supprime toutes les lignes d'un fichier --> `:1,$d`
+Supprime toutes les lignes d'un fichier --> `:1,$d` ou `:%d` ou "d+G"
 
 Va à la fin de la ligne --> `$`
 
