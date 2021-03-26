@@ -277,7 +277,7 @@ Si on ouvre un fichier et qu'on l'édite alors que nous n'avons pas les droits, 
 
 Sélectionner tout le texte d'un fichier ouvert puis copier le dans le presse-papiers système
 
-Pour que cela fonctonne il faut avoir le paquet "vim-gtk3" d'installé dans votre système!
+Pour que cela fonctionne il faut avoir le paquet "vim-gtk3" d'installé dans votre système!
 
 `:%y+`
 
@@ -290,7 +290,7 @@ Créer un fichier chiffré
 
 Afficher le résultat d'une commande directement avec vim
 
-1. Ecrire la commande en mode edition
+1. Écrire la commande en mode édition
 
 2. Passer en mode normal
 `.!$SHELL`
